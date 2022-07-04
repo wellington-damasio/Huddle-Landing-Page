@@ -27,6 +27,11 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
+@media only screen and (min-width: 67.5em) {
+  body {
+    font-size: 1.2rem;
+  }
+}
 
 #hero {
   background-image: url("../images/bg-hero-mobile.svg");
@@ -50,6 +55,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
@@ -59,8 +65,14 @@ body {
   padding-top: 1rem;
   padding-bottom: 2rem;
   width: 90%;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__container {
+    padding-top: 2rem;
+  }
 }
 
 .cards__container {
@@ -70,6 +82,7 @@ body {
   align-items: center;
   gap: 2rem;
   width: 90%;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
@@ -80,8 +93,15 @@ body {
   flex-direction: column;
   padding-top: 10rem;
   width: 90%;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 67.5em) {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .hero__head {
@@ -98,13 +118,51 @@ body {
   font-size: 1.5rem;
   line-height: 36px;
 }
+@media screen and (min-width: 67.5em) {
+  .hero__title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__content {
+    width: 50%;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__body {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+}
 .hero__text {
   text-align: center;
   line-height: 24px;
 }
+@media only screen and (min-width: 67.5em) {
+  .hero__text {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
 .hero__img {
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__img {
+    width: 50%;
+  }
 }
 
 .card {
@@ -126,6 +184,19 @@ body {
   text-align: center;
   color: hsl(208deg, 11%, 55%);
 }
+@media only screen and (min-width: 67.5em) {
+  .card {
+    flex-direction: row;
+    gap: 10rem;
+    padding: 2.4rem 4rem;
+  }
+  .card:nth-child(odd) .card__head {
+    order: 2;
+  }
+  .card:nth-child(odd) .card__body {
+    order: 1;
+  }
+}
 
 .cta-card {
   position: relative;
@@ -137,6 +208,7 @@ body {
   border-radius: 1rem;
   font-size: 1.125rem;
   width: 90%;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -149,6 +221,14 @@ body {
   font-size: 1.125rem;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 1rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .cta-card {
+    min-height: 13rem;
+  }
+  .cta-card__title {
+    font-size: 1.8rem;
+  }
 }
 
 .footer__container .logo--lg {
@@ -188,12 +268,47 @@ body {
   text-align: center;
   margin-bottom: 2rem;
 }
+@media only screen and (min-width: 67.5em) {
+  .footer__info {
+    margin-bottom: 2.4rem;
+  }
+  .footer__item {
+    margin-bottom: 2.4rem;
+  }
+  .footer__column {
+    width: 20%;
+  }
+  .footer__column:not(:first-child) {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__column:first-child {
+    width: 40%;
+  }
+  .footer__column:last-child {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 
 .logo {
   width: 8rem;
 }
 .logo--lg {
   width: 12rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .logo {
+    width: 13rem;
+  }
+  .logo--lg {
+    width: 17rem;
+  }
 }
 
 .btn {
@@ -216,6 +331,16 @@ body {
   color: white;
   background-color: hsl(322deg, 100%, 66%);
   box-shadow: rgba(255, 82, 191, 0.5) 0px 8px 24px;
+}
+@media screen and (min-width: 67.5em) {
+  .btn {
+    min-height: 3rem;
+    min-width: 10rem;
+    font-size: 1.1rem;
+  }
+  .btn--lg {
+    padding: 1rem 5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
