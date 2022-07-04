@@ -1,0 +1,253 @@
+// Importing Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+// Colors
+$pink: hsl(322, 100%, 66%);
+$veryPale-cyan: hsl(193, 100%, 96%);
+$veryDark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
+
+// Typography
+$heading-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Mixins & Helpers
+@mixin center-mobile {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  background-color: white;
+  color: $veryDark-cyan;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+// -------------------------
+//          Layout
+// -------------------------
+
+#hero {
+  background-image: url('../images/bg-hero-mobile.svg');
+  background-size: cover;
+  background-color: $veryPale-cyan;
+  margin-bottom: 4rem;
+}
+
+#cards {
+  margin-bottom: 6rem;
+}
+
+#footer {
+  margin-top: auto; //keeps footer on the bottom of the page
+  background-color: $veryDark-cyan;
+  color: white;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include center-mobile;
+  margin-bottom: 3rem;
+}
+
+.hero__container {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  @include center-mobile;
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  @include center-mobile;
+  margin-bottom: 3rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  @include center-mobile;
+}
+// --------------------------
+//         Components
+// --------------------------
+.hero {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.7rem;
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    font-family: $heading-font;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 36px;
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 24px;
+  }
+
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  padding: 2.4rem 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &__title {
+    text-align: center;
+    font-family: $heading-font;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    text-align: center;
+    color: $grayish-blue;
+  }
+}
+
+
+.cta-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  @include center-mobile;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  top: 5rem;
+  z-index: 2;
+
+  &__title {
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: $body-font;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  &__container .logo--lg {
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.4rem;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 2.2rem;
+      border: 1px solid white;
+    }
+  }
+
+  &__copyright {
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+.logo {
+  width: 8rem;
+
+  &--lg {
+    width: 12rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: $veryDark-cyan;
+  min-height: 2rem;
+  min-width: 7.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: .9rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &--lg {
+    padding: .7rem 3rem;
+  }
+
+  &--accent {
+    color: white;
+    background-color: $pink;
+    box-shadow:  rgb(255, 82, 191, .5) 0px 8px 24px;
+  }
+}

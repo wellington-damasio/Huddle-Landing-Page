@@ -1,3 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  background-color: white;
+  color: hsl(192deg, 100%, 9%);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+#hero {
+  background-image: url("../images/bg-hero-mobile.svg");
+  background-size: cover;
+  background-color: hsl(193deg, 100%, 96%);
+  margin-bottom: 4rem;
+}
+
+#cards {
+  margin-bottom: 6rem;
+}
+
+#footer {
+  margin-top: auto;
+  background-color: hsl(192deg, 100%, 9%);
+  color: white;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.hero__container {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.7rem;
+  margin-bottom: 4rem;
+}
+.hero__title {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+.hero__text {
+  text-align: center;
+  line-height: 24px;
+}
+.hero__img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  padding: 2.4rem 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card__title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+.card__text {
+  text-align: center;
+  color: hsl(208deg, 11%, 55%);
+}
+
+.cta-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  top: 5rem;
+  z-index: 2;
+}
+.cta-card__title {
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.footer__container .logo--lg {
+  margin-bottom: 2rem;
+}
+.footer__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.footer__info:last-child {
+  margin-bottom: 3rem;
+}
+.footer__item {
+  margin-bottom: 1.4rem;
+}
+.footer__social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footer__social-media__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 2.2rem;
+  border: 1px solid white;
+}
+.footer__copyright {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 8rem;
+}
+.logo--lg {
+  width: 12rem;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: hsl(192deg, 100%, 9%);
+  min-height: 2rem;
+  min-width: 7.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.btn--lg {
+  padding: 0.7rem 3rem;
+}
+.btn--accent {
+  color: white;
+  background-color: hsl(322deg, 100%, 66%);
+  box-shadow: rgba(255, 82, 191, 0.5) 0px 8px 24px;
+}
 
 /*# sourceMappingURL=styles.css.map */
